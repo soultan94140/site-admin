@@ -22,6 +22,10 @@
 		{
 			"src": "^\\/keystatic(?:\\/(.*?))?\\/?$",
 			"dest": "_render"
+		},
+		{
+			"src": "^\\/$",
+			"dest": "_render"
 		}
 	]
 }
