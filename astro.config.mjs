@@ -9,6 +9,8 @@ import react from "@astrojs/react";
 export default defineConfig({
   integrations: [keystatic(), react()],
   output: "hybrid",
-  adapter: vercel(),
+  adapter: vercel({
+    edgeMiddleware: true,
+  }),
 });
 
