@@ -10,13 +10,13 @@ function makeHandler(_config) {
     const handler = makeGenericAPIRouteHandler({
       ..._config,
       clientId: (_ref = (_config$clientId = _config.clientId) !== null && _config$clientId !== void 0 ? _config$clientId : envVarsForCf === null || envVarsForCf === void 0 ? void 0 : envVarsForCf.KEYSTATIC_GITHUB_CLIENT_ID) !== null && _ref !== void 0 ? _ref : tryOrUndefined(() => {
-        return undefined                                          ;
+        return "Iv23liyldZfxqsxWJp3o";
       }),
       clientSecret: (_ref2 = (_config$clientSecret = _config.clientSecret) !== null && _config$clientSecret !== void 0 ? _config$clientSecret : envVarsForCf === null || envVarsForCf === void 0 ? void 0 : envVarsForCf.KEYSTATIC_GITHUB_CLIENT_SECRET) !== null && _ref2 !== void 0 ? _ref2 : tryOrUndefined(() => {
-        return undefined                                              ;
+        return "d2641b177c4c83cef389a1532287bd910faf25de";
       }),
       secret: (_ref3 = (_config$secret = _config.secret) !== null && _config$secret !== void 0 ? _config$secret : envVarsForCf === null || envVarsForCf === void 0 ? void 0 : envVarsForCf.KEYSTATIC_SECRET) !== null && _ref3 !== void 0 ? _ref3 : tryOrUndefined(() => {
-        return undefined                                ;
+        return "4eda56cb4b6826e516cf1c2164c4eb88da0f6c53ada1a4fa53a86ad42635d3d9cebd2826b5bb620d";
       })
     }, {
       slugEnvName: "PUBLIC_KEYSTATIC_GITHUB_APP_SLUG"
@@ -88,9 +88,10 @@ function tryOrUndefined(fn) {
 
 const config = config$1({
   storage: {
-    kind: "github",
-    repo: "Soultan941/sofianesoultan.fr",
-    pathPrefix: "packages/site"
+    kind: "cloud"
+  },
+  cloud: {
+    project: "sofiane/site"
   },
   singletons: {
     home: singleton({
